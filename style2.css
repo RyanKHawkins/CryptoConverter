@@ -30,6 +30,7 @@ body {
     border: 1px solid darkgray;
     font-size: 15px;
     user-select: text;
+    background-color: white;
 }
 #text_input {
 
@@ -53,9 +54,12 @@ hr {
     color: transparent;
     user-select: none;
 }
+.unselectable:hover {
+    
+}
 #clear_button {
 
 }
 #text_result {
-    background-color: white;
+
 }
