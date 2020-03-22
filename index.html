@@ -32,7 +32,10 @@
                     <option label="AlphaNumeric" value="alphaNumeric"></option>
                     <option label="Rot13" value="rot13">
                     <option label="Reverse" value="reverse"></option>
-                    <option label="Caesar" value="caesar"><label for="shift_selector">shift</label><input type="number" min="0" max="26" style="display: none" id="shift_selector" value="3"></input></option>
+                    <option label="Caesar" value="caesar">
+                        <label for="shift_selector"></label>
+                            <input type="number" min="0" max="26" id="shift_selector" class="unselectable" value="3"></input>
+                    </option>
 
                 </select>
                 <button id="clear_button">Clear</button>

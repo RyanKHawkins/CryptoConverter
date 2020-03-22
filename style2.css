@@ -49,7 +49,9 @@ hr {
     width: 35px;
 }
 .unselectable {
-
+    background-color: transparent;
+    color: transparent;
+    user-select: none;
 }
 #clear_button {
 

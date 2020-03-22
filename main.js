@@ -22,7 +22,7 @@ cipher_value.addEventListener("change", () => { result_div.innerText = encryptMe
 
 function encryptMessage() {
     var string = text_input.value;
-    shift_selector.style = "display: none";
+    //shift_selector.style = "display: none";
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
     switch (cipher_value.value) {
@@ -34,7 +34,8 @@ function encryptMessage() {
             break;
         case "caesar":
             string = encryptCaesar(string);
-            shift_selector.style = "display: normal";
+            //shift_selector.style = "display: normal";
+            shift_selector.classList.remove("unselectable");
             break;
         case "reverse":
             string = string.split("").reverse().join("");
