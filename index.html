@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript Crypto Converter</title>
+	<link href="style2.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="converter">
+		<h4 id="title">Crypto Converter</h4>
+		<div id="conversion_area">
+			<textarea id="text_input" class="texts" autocomplete="off" placeholder="Enter message here."></textarea>
+        </div>
+        <div class="options_menu">
+            <hr>
+            <div class="modifiers">
+                <label for="block_option">
+                    <input type="checkbox" id="block_option">Block letters</input>
+                </label>
+                <label for="caps_option">
+                    <input type="checkbox" id="caps_option">Capitalize letters</input>
+                </label>
+            </div>
+            <div>
+                <label for="cipher">Cipher</label>
+                <select name="cipher" id="cipher_selector">
+                    <option value="blank"></option>
+                    <option label="Atbash" value="atbash"></option>
+                    <option label="AlphaNumeric" value="alphaNumeric"></option>
+                    <option label="Rot13" value="rot13">
+                    <option label="Reverse" value="reverse"></option>
+                    <option label="Caesar" value="caesar"><label for="shift_selector"></label><input type="number" min="0" max="26" style="display: none" id="shift_selector" value="3"></input></option>
+
+                </select>
+                <button id="clear_button">Clear</button>
+            </div>
+
+            <hr>
+        </div>
+        <div id="text_result" class="texts"></div>
+    </div>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>

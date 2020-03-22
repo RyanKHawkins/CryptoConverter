@@ -1,0 +1,37 @@
+body {
+    background-color: lightgray;
+}
+#title {
+
+}
+#converter {
+    background-color: lightblue;
+    border: 1px solid darkgray;
+    width: 50%;
+    margin: auto;
+}
+#conversion_area {
+
+
+}
+.texts {
+    width: 50%;
+}
+#text_input {
+
+}
+.options_menu {
+
+}
+#modifiers {
+
+}
+#shift_selector {
+
+}
+#clear_button {
+
+}
+#text_result {
+
+}
