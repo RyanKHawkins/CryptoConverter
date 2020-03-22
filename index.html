@@ -16,23 +16,23 @@
         </div>
         <div class="options_menu">
             <hr>
-            <div class="modifiers">
+            <div>
                 <label for="block_option">
-                    <input type="checkbox" id="block_option">Block letters</input>
+                    <input type="checkbox" class="modifiers" id="block_option">Block letters</input>
                 </label>
                 <label for="caps_option">
-                    <input type="checkbox" id="caps_option">Capitalize letters</input>
+                    <input type="checkbox" class="modifiers" id="caps_option">Capitalize letters</input>
                 </label>
             </div>
             <div>
                 <label for="cipher">Cipher</label>
-                <select name="cipher" id="cipher_selector">
+                <select name="cipher" id="cipher_selector" class="modifiers">
                     <option value="blank"></option>
                     <option label="Atbash" value="atbash"></option>
                     <option label="AlphaNumeric" value="alphaNumeric"></option>
                     <option label="Rot13" value="rot13">
                     <option label="Reverse" value="reverse"></option>
-                    <option label="Caesar" value="caesar"><label for="shift_selector"></label><input type="number" min="0" max="26" style="display: none" id="shift_selector" value="3"></input></option>
+                    <option label="Caesar" value="caesar"><label for="shift_selector">shift</label><input type="number" min="0" max="26" style="display: none" id="shift_selector" value="3"></input></option>
 
                 </select>
                 <button id="clear_button">Clear</button>

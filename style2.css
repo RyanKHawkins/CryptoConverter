@@ -1,37 +1,52 @@
 body {
     background-color: lightgray;
+    user-select: none;
 }
 #title {
-
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    padding: 15px;
 }
 #converter {
     background-color: lightblue;
     border: 1px solid darkgray;
     width: 50%;
+    height: 400px;
     margin: auto;
+    padding: 5px;
 }
 #conversion_area {
-
-
+    position: relative;
+    text-align: center;
 }
 .texts {
-    width: 50%;
+    width: 75%;
+    height: 75px;
+    position: relative;
+    margin: auto;
+    margin-top: 15px auto 15px auto;
+    padding: 10px;
+    border: 1px solid darkgray;
+    font-size: 15px;
+    user-select: text;
 }
 #text_input {
 
 }
 .options_menu {
+    text-align: center;
 
 }
-#modifiers {
-
+.modifiers {
+    margin: 5px;
 }
 #shift_selector {
-
+    width: 35px;
 }
 #clear_button {
 
 }
 #text_result {
-
+    background-color: white;
 }
