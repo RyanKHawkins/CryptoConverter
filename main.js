@@ -23,6 +23,7 @@ cipher_value.addEventListener("change", () => { result_div.innerText = encryptMe
 function encryptMessage() {
     var string = text_input.value;
     //shift_selector.style = "display: none";
+    shift_selector.classList.add("unselectable");
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
     switch (cipher_value.value) {
