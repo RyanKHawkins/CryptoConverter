@@ -7,6 +7,9 @@ body {
     justify-content: center;
     margin: auto;
     padding: 10px;
+    letter-spacing: 15px;
+    word-spacing: 15px;
+    text-transform: uppercase;
 }
 #converter {
     background-color: lightblue;
