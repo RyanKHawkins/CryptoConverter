@@ -24,11 +24,13 @@ function encryptMessage() {
     var string = text_input.value;
     //shift_selector.style = "display: none";
     shift_selector.classList.add("unselectable");
+    result_div.style = "word-spacing: normal";
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
     switch (cipher_value.value) {
         case "alphaNumeric":
             string = alphaNumeric(string);
+            result_div.style = "word-spacing: 5px";
             break;
         case "atbash":
             string = atbash(string);

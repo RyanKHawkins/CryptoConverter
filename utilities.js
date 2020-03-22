@@ -38,3 +38,5 @@ export function stretch_text() {
     result_div.style.letterSpacing = "2px";
     setTimeout(() => { result_div.style.letterSpacing = "normal" }, 250)
 }
+
+//Consider adding a reset/update function
