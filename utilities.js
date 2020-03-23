@@ -23,13 +23,12 @@ export function blockString(string, number = 3, nullChar = "x") {
 export function clear_text() {
     text_input.style.color = "gray";
     result_div.style.color = "gray";
-    setTimeout(() => { 
-        text_input.value = ""; result_div.innerText = ""; 
+    setTimeout(() => {
+        text_input.value = ""; result_div.innerText = "";
         text_input.style.color = "black"; result_div.style.color = "black";
         cipher_value.value = "blank";
-        //shift_selector.style = "display: none";
         shift_selector.classList.add("unselectable");
-        }
+    }
         , 250);
 
 }
@@ -40,3 +39,12 @@ export function stretch_text() {
 }
 
 //Consider adding a reset/update function
+/*--
+export function update_values() {
+    shift_selector.classList.add("unselectable");
+    shift_selector.value = "3";
+    keyword_selector.classList.add("unselectable");
+    result_div.style = "word-spacing: normal";
+}
+
+--*/

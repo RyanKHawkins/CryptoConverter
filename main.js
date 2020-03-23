@@ -6,12 +6,14 @@ import { encryptCaesar } from "/caesar.js";
 import { alphaNumeric } from "/alphaNumeric.js";
 import { atbash } from "/atbash.js";
 
+//Initializing DOM variables
 export const text_input = document.getElementById("text_input");
 export const result_div = document.getElementById("text_result");
 const block_option = document.getElementById("block_option");
 const caps_option = document.getElementById("caps_option");
 export const cipher_value = document.getElementById("cipher_selector");
 export const shift_selector = document.getElementById("shift_selector");
+export const keyword_selector = document.getElementById("keyword_selector");
 
 //Event Listeners
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
@@ -19,14 +21,16 @@ block_option.addEventListener("click", () => { result_div.innerText = encryptMes
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
 document.getElementById("clear_button").addEventListener("click", () => { clear_text() });
 cipher_value.addEventListener("change", () => { result_div.innerText = encryptMessage() });
+keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() })
 
 function encryptMessage() {
     var string = text_input.value;
-    //shift_selector.style = "display: none";
+
     shift_selector.classList.add("unselectable");
     result_div.style = "word-spacing: normal";
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
+    
     switch (cipher_value.value) {
         case "alphaNumeric":
             string = alphaNumeric(string);
