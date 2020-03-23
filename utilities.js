@@ -43,7 +43,7 @@ export function stretch_text() {
 /*--
 export function update_values() {
     shift_selector.classList.add("unselectable");
-    //shift_selector.value = "3";
+    //shift_selector.value = 3;
     keyword_selector.classList.add("unselectable");
     keyword_selector.value = "";
     result_div.style = "word-spacing: normal";
