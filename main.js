@@ -21,7 +21,8 @@ block_option.addEventListener("click", () => { result_div.innerText = encryptMes
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
 document.getElementById("clear_button").addEventListener("click", () => { clear_text() });
 cipher_value.addEventListener("change", () => { result_div.innerText = encryptMessage() });
-keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() })
+shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
+keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 
 function encryptMessage() {
     var string = text_input.value;
@@ -40,9 +41,8 @@ function encryptMessage() {
             string = atbash(string);
             break;
         case "caesar":
-            string = encryptCaesar(string);
-            //shift_selector.style = "display: normal";
             shift_selector.classList.remove("unselectable");
+            string = encryptCaesar(string, parseInt(shift_selector.value));
             break;
         case "morse_code":
             result_div.innerText = "This is not a current option.";
