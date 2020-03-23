@@ -40,6 +40,9 @@ function encryptMessage() {
             //shift_selector.style = "display: normal";
             shift_selector.classList.remove("unselectable");
             break;
+        case "morse_code":
+            result_div.innerText = "This is not a current option.";
+            break;
         case "reverse":
             string = string.split("").reverse().join("");
             break;
