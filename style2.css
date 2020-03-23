@@ -18,15 +18,16 @@ body {
     height: 400px;
     margin: auto;
     padding: 5px;
+    min-width: 325px;
 }
 #conversion_area {
     position: relative;
     text-align: center;
 }
 .texts {
-    width: 95%;
-    height: 100px;
     position: relative;
+    width: 90%;
+    height: 100px;
     margin: auto;
     margin-top: 15px auto 15px auto;
     padding: 10px;
