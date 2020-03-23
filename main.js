@@ -31,7 +31,7 @@ function encryptMessage() {
     result_div.style = "word-spacing: normal";
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
-    
+
     switch (cipher_value.value) {
         case "alphaNumeric":
             string = alphaNumeric(string);

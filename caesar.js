@@ -2,7 +2,7 @@
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
-export function encryptCaesar(string, shift=3) {
+export function encryptCaesar(string, shift = 3) {
     var string = string.toUpperCase();
     var encryptedString = "";
 
