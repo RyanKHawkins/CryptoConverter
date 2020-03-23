@@ -54,6 +54,7 @@ hr {
 }
 #shift_selector {
     width: 35px;
+    //margin-right: 2.5px;
 }
 .unselectable {
     background-color: transparent;

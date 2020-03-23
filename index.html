@@ -23,6 +23,9 @@
                 <label for="caps_option">
                     <input type="checkbox" class="modifiers" id="caps_option">Capitalize letters</input>
                 </label>
+                <label for="keyword_option">
+                    <input type="checkbox" class="unselectable modifiers" id="keyword_option">Add Keyword</input>
+                </label>
             </div>
             <div>
                 <label for="cipher">Cipher</label>
@@ -30,12 +33,14 @@
                     <option value="blank"></option>
                     <option label="Atbash" value="atbash"></option>
                     <option label="AlphaNumeric" value="alphaNumeric"></option>
+                    <option label="Caesar" value="caesar"></option>
+                    <!--<option label="Morse Code" value="morse_code"></option>-->
                     <option label="Rot13" value="rot13">
                     <option label="Reverse" value="reverse"></option>
-                    <option label="Caesar" value="caesar">
-                        <label for="shift_selector"></label>
-                            <input type="number" min="0" max="26" id="shift_selector" class="unselectable" value="3"></input>
-                    </option>
+
+
+                <input type="number" min="0" max="26" id="shift_selector" class="unselectable modifiers" value="3">Shift</input>
+                <input type="text" id="keyword_selector" class="unselectable modifiers" value="keyword">Keyword</input>
 
                 </select>
                 <button id="clear_button">Clear</button>
