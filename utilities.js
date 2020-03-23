@@ -1,6 +1,6 @@
 //utilities.js
 
-import { result_div, text_input, cipher_value, shift_selector } from "/main.js";
+import { result_div, text_input, cipher_value, shift_selector, keyword_selector } from "/main.js";
 
 export function blockString(string, number = 3, nullChar = "x") {
     var string = string.replace(/ /g, "").split("");
@@ -44,7 +44,10 @@ export function update_values() {
     shift_selector.classList.add("unselectable");
     shift_selector.value = "3";
     keyword_selector.classList.add("unselectable");
+    keyword_selector.value = "";
     result_div.style = "word-spacing: normal";
+    block_option.checked ? string = blockString(string) : string;
+    caps_option.checked ? string = string.toUpperCase() : string;
 }
 
 --*/
