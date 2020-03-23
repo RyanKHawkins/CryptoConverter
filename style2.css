@@ -32,6 +32,7 @@ body {
     padding: 10px;
     border: 1px solid darkgray;
     font-size: 15px;
+    font-family: "Times New Roman";
     user-select: text;
     background-color: white;
 }
@@ -44,7 +45,8 @@ hr {
 
 .options_menu {
     text-align: center;
-
+    //border: 1px solid darkgray;
+    //margin: 5px;
 }
 .modifiers {
     margin: 5px;
@@ -65,4 +67,8 @@ hr {
 }
 #text_result {
 
+}
+footer {
+    padding: 2px;
+    text-align: center;
 }
