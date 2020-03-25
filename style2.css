@@ -19,6 +19,7 @@ body {
     margin: auto;
     padding: 5px;
     min-width: 325px;
+    min-height: 450px;
 }
 #conversion_area {
     position: relative;
