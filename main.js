@@ -11,6 +11,7 @@ export const text_input = document.getElementById("text_input");
 export const result_div = document.getElementById("text_result");
 const block_option = document.getElementById("block_option");
 const caps_option = document.getElementById("caps_option");
+const keyword_option = document.getElementById("keyword_option");
 export const cipher_value = document.getElementById("cipher_selector");
 export const shift_selector = document.getElementById("shift_selector");
 export const keyword_selector = document.getElementById("keyword_selector");
@@ -25,12 +26,15 @@ cipher_value.addEventListener("change", () => { result_div.innerText = encryptMe
 shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 operation_selector.addEventListener("change", function () { result_div.innerText = encryptMessage() });
+keyword_option.addEventListener("change", function () { result_div.innerText = encryptMessage() })
 
 function encryptMessage() {
+
     update_values();
     var string = text_input.value;
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
+    keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable");
 
     switch (cipher_value.value) {
         case "alphaNumeric":
