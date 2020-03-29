@@ -14,6 +14,7 @@ const caps_option = document.getElementById("caps_option");
 export const cipher_value = document.getElementById("cipher_selector");
 export const shift_selector = document.getElementById("shift_selector");
 export const keyword_selector = document.getElementById("keyword_selector");
+export const operation_selector = document.getElementById("operation_selector");
 
 //Event Listeners
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });

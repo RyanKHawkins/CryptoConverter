@@ -1,6 +1,6 @@
 //utilities.js
 
-import { result_div, text_input, cipher_value, shift_selector, keyword_selector } from "/main.js";
+import { result_div, text_input, cipher_value, shift_selector, keyword_selector, } from "/main.js";
 
 export function blockString(string, number = 3, nullChar = "x") {
     var string = string.replace(/ /g, "").split("");
@@ -29,6 +29,7 @@ export function clear_text() {
         cipher_value.value = "blank";
         keyword_selector.value = "";
         shift_selector.value = 3;
+        operation_selector.value = "encrypt";
     }
         , 250);
 
@@ -38,7 +39,6 @@ export function stretch_text() {
     result_div.style.letterSpacing = "2px";
     setTimeout(() => { result_div.style.letterSpacing = "normal" }, 250)
 }
-
 
 export function update_values() {
     shift_selector.classList.add("unselectable");

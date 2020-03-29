@@ -17,7 +17,7 @@
         <div class="options_menu">
             <hr>
             <div>
-                <select name="operation" class="modifiers unselectable">
+                <select name="operation" id="operation_selector" class="modifiers unselectable">
                     <option label="Encrypt" value="encrypt"></option>
                     <option label="Decrypt" value="decrypt"></option>
                 </select>
@@ -28,7 +28,7 @@
                     <input type="checkbox" class="modifiers" id="caps_option">Capitalize</input>
                 </label>
                 <label for="keyword_option">
-                    <input type="checkbox" class="unselectable modifiers" id="keyword_option">Keyword</input>
+                    <input type="checkbox" class="unselectable modifiers" id="keyword_option">Use Keyword</input>
                 </label>
 
             </div>
@@ -44,8 +44,10 @@
                     <option label="Reverse" value="reverse"></option>
                 </select>
 
-                <input type="number" min="0" max="26" id="shift_selector" class="unselectable modifiers" value="3">Shift</input>
-                <input type="text" id="keyword_selector" class="unselectable modifiers" value="" autocomplete="off">Keyword</input>
+                <label for="shift_selector">Shift</label>
+                    <input name="shift_selector" type="number" min="0" max="26" id="shift_selector" class="unselectable modifiers" value="3"></input>
+                <label for="keyword_selector">Keyword</label>
+                    <input name="keyword_selector" type="text" id="keyword_selector" class="unselectable modifiers" value="" autocomplete="off"></input>
 
                 </select>
                 <button id="clear_button">Clear</button>
