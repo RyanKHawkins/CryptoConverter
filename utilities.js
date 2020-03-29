@@ -42,6 +42,8 @@ export function stretch_text() {
 
 export function update_values() {
     shift_selector.classList.add("unselectable");
-    keyword_selector.classList.add("unselectable");
     result_div.style = "word-spacing: normal";
+    block_option.checked ? string = blockString(string) : string;
+    caps_option.checked ? string = string.toUpperCase() : string;
+    keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable");
 }
