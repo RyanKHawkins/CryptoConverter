@@ -24,6 +24,7 @@ document.getElementById("clear_button").addEventListener("click", () => { clear_
 cipher_value.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
+operation_selector.addEventListener("change", function () { result_div.innerText = encryptMessage() });
 
 function encryptMessage() {
     update_values();
