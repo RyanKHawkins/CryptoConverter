@@ -66,7 +66,7 @@ hr {
     user-select: none;
 }
 .unselectable:hover {
-
+    color:gray;
 }
 #clear_button {
 
