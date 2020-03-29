@@ -57,13 +57,16 @@ hr {
     width: 35px;
     //margin-right: 2.5px;
 }
+.operations_selector {
+
+}
 .unselectable {
     background-color: transparent;
     color: transparent;
     user-select: none;
 }
 .unselectable:hover {
-    
+
 }
 #clear_button {
 
