@@ -27,6 +27,7 @@ export function clear_text() {
         text_input.value = ""; result_div.innerText = "";
         text_input.style.color = "black"; result_div.style.color = "black";
         cipher_value.value = "blank";
+        keyword_selector.value = "";
         shift_selector.classList.add("unselectable");
         shift_selector.value = 3;
     }
