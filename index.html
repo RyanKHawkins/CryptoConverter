@@ -17,6 +17,10 @@
         <div class="options_menu">
             <hr>
             <div>
+                <select name="operation" class="modifiers unselectable">
+                    <option label="Encrypt" value="encrypt"></option>
+                    <option label="Decrypt" value="decrypt"></option>
+                </select>
                 <label for="block_option">
                     <input type="checkbox" class="modifiers" id="block_option">Block</input>
                 </label>
@@ -26,6 +30,7 @@
                 <label for="keyword_option">
                     <input type="checkbox" class="unselectable modifiers" id="keyword_option">Keyword</input>
                 </label>
+
             </div>
             <div>
                 <label for="cipher">Cipher</label>
@@ -37,7 +42,7 @@
                     <!--<option label="Morse Code" value="morse_code"></option>-->
                     <option label="Rot13" value="rot13">
                     <option label="Reverse" value="reverse"></option>
-
+                </select>
 
                 <input type="number" min="0" max="26" id="shift_selector" class="unselectable modifiers" value="3">Shift</input>
                 <input type="text" id="keyword_selector" class="unselectable modifiers" value="" autocomplete="off">Keyword</input>
