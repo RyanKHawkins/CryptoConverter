@@ -27,9 +27,9 @@ shift_selector.addEventListener("change", () => { result_div.innerText = encrypt
 keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 operation_selector.addEventListener("change", function () { result_div.innerText = encryptMessage() });
 keyword_option.addEventListener("change", function () {
+    keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable");
     result_div.innerText = encryptMessage();
-    keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable")
-})
+    })
 
 function encryptMessage() {
     update_values();

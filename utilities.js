@@ -37,5 +37,5 @@ export function stretch_text() {
 export function update_values() {
     shift_selector.classList.add("unselectable");
     result_div.style = "word-spacing: normal";
-    keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable");
+    //keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable");
 }
