@@ -21,18 +21,12 @@ export function blockString(string, number = 3, nullChar = "x") {
 }
 
 export function clear_text() {
-    text_input.style.color = "gray";
-    result_div.style.color = "gray";
-    setTimeout(() => {
-        text_input.value = ""; result_div.innerText = "";
-        text_input.style.color = "black"; result_div.style.color = "black";
-        cipher_value.value = "blank";
-        keyword_selector.value = "";
-        shift_selector.value = 3;
-        operation_selector.value = "encrypt";
-    }
-        , 250);
-
+    keyword_option.checked = false;
+    text_input.value = ""; result_div.innerText = "";
+    cipher_value.value = "blank";
+    keyword_selector.value = "";
+    shift_selector.value = 3;
+    operation_selector.value = "encrypt";
 }
 
 export function stretch_text() {
@@ -43,7 +37,5 @@ export function stretch_text() {
 export function update_values() {
     shift_selector.classList.add("unselectable");
     result_div.style = "word-spacing: normal";
-    block_option.checked ? string = blockString(string) : string;
-    caps_option.checked ? string = string.toUpperCase() : string;
     keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable");
 }

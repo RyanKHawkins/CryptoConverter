@@ -32,6 +32,8 @@ function encryptMessage() {
 
     update_values();
     var string = text_input.value;
+    block_option.checked ? string = blockString(string) : string;
+    caps_option.checked ? string = string.toUpperCase() : string;
 
     switch (cipher_value.value) {
         case "alphaNumeric":
