@@ -1,7 +1,7 @@
 //JS CryptoConverter
 //main.js
 
-import { blockString, stretch_text, clear_text, } from "/utilities.js";
+import { blockString, stretch_text, clear_text, update_values } from "/utilities.js";
 import { encryptCaesar } from "/caesar.js";
 import { alphaNumeric } from "/alphaNumeric.js";
 import { atbash } from "/atbash.js";
@@ -19,16 +19,14 @@ export const keyword_selector = document.getElementById("keyword_selector");
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
 block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
-document.getElementById("clear_button").addEventListener("click", () => { clear_text() });
+document.getElementById("clear_button").addEventListener("click", () => { clear_text(), update_values() });
 cipher_value.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 
 function encryptMessage() {
+    update_values();
     var string = text_input.value;
-
-    shift_selector.classList.add("unselectable");
-    result_div.style = "word-spacing: normal";
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
 

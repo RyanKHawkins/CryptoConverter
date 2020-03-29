@@ -28,7 +28,6 @@ export function clear_text() {
         text_input.style.color = "black"; result_div.style.color = "black";
         cipher_value.value = "blank";
         keyword_selector.value = "";
-        shift_selector.classList.add("unselectable");
         shift_selector.value = 3;
     }
         , 250);
@@ -40,16 +39,9 @@ export function stretch_text() {
     setTimeout(() => { result_div.style.letterSpacing = "normal" }, 250)
 }
 
-//Consider adding a reset/update function
-/*--
+
 export function update_values() {
     shift_selector.classList.add("unselectable");
-    //shift_selector.value = 3;
     keyword_selector.classList.add("unselectable");
-    keyword_selector.value = "";
     result_div.style = "word-spacing: normal";
-    block_option.checked ? string = blockString(string) : string;
-    caps_option.checked ? string = string.toUpperCase() : string;
 }
-
---*/
