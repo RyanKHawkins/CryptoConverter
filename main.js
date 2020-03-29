@@ -2,7 +2,7 @@
 //main.js
 
 import { blockString, stretch_text, clear_text, update_values } from "/utilities.js";
-import { encryptCaesar } from "/caesar.js";
+import { encryptCaesar, decryptCaesar } from "/caesar.js";
 import { alphaNumeric } from "/alphaNumeric.js";
 import { atbash } from "/atbash.js";
 
@@ -29,7 +29,7 @@ operation_selector.addEventListener("change", function () { result_div.innerText
 keyword_option.addEventListener("change", function () {
     keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable");
     result_div.innerText = encryptMessage();
-    })
+})
 
 function encryptMessage() {
     update_values();
@@ -47,7 +47,12 @@ function encryptMessage() {
             break;
         case "caesar":
             shift_selector.classList.remove("unselectable");
-            string = encryptCaesar(string, parseInt(shift_selector.value));
+            operation_selector.classList.remove("unselectable");
+            if (operation_selector.value == "encrypt") {
+                string = encryptCaesar(string, parseInt(shift_selector.value));
+            } else {
+                string = decryptCaesar(string, parseInt(shift_selector.value));
+            }
             break;
         case "morse_code":
             result_div.innerText = "This is not a current option.";
