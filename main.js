@@ -5,6 +5,7 @@ import { blockString, stretch_text, clear_text, update_values } from "/utilities
 import { encryptCaesar, decryptCaesar } from "/caesar.js";
 import { alphaNumeric } from "/alphaNumeric.js";
 import { atbash } from "/atbash.js";
+import { encryptMorse, decryptMorse } from "/morseCode.js";
 
 //Initializing DOM variables
 export const text_input = document.getElementById("text_input");
@@ -55,7 +56,12 @@ function encryptMessage() {
             }
             break;
         case "morse_code":
-            result_div.innerText = "This is not a current option.";
+            operation_selector.classList.remove("unselectable");
+            if (operation_selector.value == "encrypt") {
+                string = encryptMorse(string);
+            } else {
+                string = decryptMorse(string);
+            }
             break;
         case "reverse":
             string = string.split("").reverse().join("");
