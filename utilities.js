@@ -21,7 +21,8 @@ export function blockString(string, number = 3, nullChar = "x") {
 }
 
 export function clear_text() {
-    keyword_option.checked = false;
+    keyword_option.checked = false;    
+    keyword_selector.classList.add("unselectable");
     text_input.value = ""; result_div.innerText = "";
     cipher_value.value = "blank";
     keyword_selector.value = "";
