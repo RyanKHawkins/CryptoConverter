@@ -59,7 +59,8 @@ function encryptMessage() {
             operation_selector.classList.remove("unselectable");
             if (operation_selector.value == "encrypt") {
                 string = encryptMorse(string);
-            } else {
+            }
+            else {
                 string = decryptMorse(string);
             }
             break;

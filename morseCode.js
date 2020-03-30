@@ -27,8 +27,9 @@ export function encryptMorse(string) {
     for (let i = 0; i < string.length; i++) {
         let char = string[i];
         if (char in english_to_morse) {
-            newString += english_to_morse[char] + " ";
+            newString += english_to_morse[char];
         }
+        newString += " "
     } return newString;
 }
 

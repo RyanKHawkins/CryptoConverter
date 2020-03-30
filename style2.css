@@ -72,7 +72,7 @@ hr {
 
 }
 #text_result {
-
+    word-wrap: break-word;
 }
 footer {
     padding: 2px;
