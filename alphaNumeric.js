@@ -13,6 +13,6 @@ export function alphaNumeric(string) {
             encryptedString.push(alphabet.indexOf(string[i]));
         }
     }
-    encryptedString = encryptedString.join("-").replace(/- -/g, " ");
+    encryptedString = encryptedString.join("-").replace(/- -/g, " ").replace(/- /g, " ").replace(/ -/g, " ");
     return encryptedString;
 }
