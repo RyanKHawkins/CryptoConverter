@@ -47,12 +47,14 @@ hr {
 
 .options_menu {
     text-align: center;
+    display: inline;
     //border: 1px solid darkgray;
     //margin: 5px;
 }
 .modifiers {
     margin: 5px;
 }
+
 #shift_selector {
     width: 35px;
     //margin-right: 2.5px;
