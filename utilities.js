@@ -24,7 +24,7 @@ export function clear_text() {
     keyword_option.checked = false;    
     keyword_selector.classList.add("unselectable");
     text_input.value = ""; result_div.innerText = "";
-    cipher_value.value = "blank";
+    cipher_value.value = "";
     keyword_selector.value = "";
     shift_selector.value = 3;
     operation_selector.value = "encrypt";
