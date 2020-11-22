@@ -75,5 +75,6 @@ function encryptMessage() {
             string = string;
             break;
     }
+    keyword_selector.value = "";
     return string;
 }
