@@ -1,14 +1,14 @@
 # JS-CryptoConverter
 
-Cryptography converter using Javascript.
+*Cryptography converter using Javascript.*
 
 
-Available Ciphers:
+#### Available Ciphers:
 - Atbash
 - Caesar
 - Morse Code
 - Alpha Numeric
 - Reverse
 
-Additional Features:
-- Character blocking
+#### Additional Features:
+- Character/string blocking
