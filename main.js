@@ -10,9 +10,9 @@ import { encryptMorse, decryptMorse } from "/morseCode.js";
 //Initializing DOM variables
 export const text_input = document.getElementById("text_input");
 export const result_div = document.getElementById("text_result");
-const block_option = document.getElementById("block_option");
-const caps_option = document.getElementById("caps_option");
-const keyword_option = document.getElementById("keyword_option");
+export const block_option = document.getElementById("block_option");
+export const caps_option = document.getElementById("caps_option");
+export const keyword_option = document.getElementById("keyword_option");
 export const cipher_selector = document.getElementById("cipher_selector");
 export const shift_selector = document.getElementById("shift_selector");
 export const keyword_selector = document.getElementById("keyword_selector");

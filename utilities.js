@@ -1,6 +1,6 @@
 //utilities.js
 
-import { result_div, text_input, cipher_selector, shift_selector, keyword_selector, } from "/main.js";
+import { result_div, text_input, cipher_selector, shift_selector, keyword_selector } from "/main.js";
 
 export function blockString(string, number = 3, nullChar = "x") {
     var string = string.replace(/ /g, "").split("");
@@ -21,6 +21,8 @@ export function blockString(string, number = 3, nullChar = "x") {
 }
 
 export function resetAllValues() {
+    block_option.checked = false;
+    caps_option.checked = false;
     keyword_option.checked = false;
     keyword_selector.classList.add("unselectable");
     text_input.value = ""; result_div.innerText = "";
@@ -40,3 +42,4 @@ export function clear_settings() {
     operation_selector.classList.add("unselectable");
     result_div.style = "word-spacing: normal";
 }
+
