@@ -1,6 +1,6 @@
 //utilities.js
 
-import { result_div, text_input, cipher_value, shift_selector, keyword_selector, } from "/main.js";
+import { result_div, text_input, cipher_selector, shift_selector, keyword_selector, } from "/main.js";
 
 export function blockString(string, number = 3, nullChar = "x") {
     var string = string.replace(/ /g, "").split("");
@@ -24,7 +24,7 @@ export function clear_text() {
     keyword_option.checked = false;    
     keyword_selector.classList.add("unselectable");
     text_input.value = ""; result_div.innerText = "";
-    cipher_value.value = "";
+    cipher_selector.value = "";
     keyword_selector.value = "";
     shift_selector.value = 3;
     operation_selector.value = "encrypt";

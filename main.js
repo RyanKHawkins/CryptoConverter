@@ -13,7 +13,7 @@ export const result_div = document.getElementById("text_result");
 const block_option = document.getElementById("block_option");
 const caps_option = document.getElementById("caps_option");
 const keyword_option = document.getElementById("keyword_option");
-export const cipher_value = document.getElementById("cipher_selector");
+export const cipher_selector = document.getElementById("cipher_selector");
 export const shift_selector = document.getElementById("shift_selector");
 export const keyword_selector = document.getElementById("keyword_selector");
 export const operation_selector = document.getElementById("operation_selector");
@@ -23,7 +23,7 @@ text_input.addEventListener("input", () => { result_div.innerText = encryptMessa
 block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
 document.getElementById("clear_button").addEventListener("click", () => { clear_text(), update_values() });
-cipher_value.addEventListener("change", () => { result_div.innerText = encryptMessage(); shift_selector.value = "3"  });
+cipher_selector.addEventListener("change", () => { result_div.innerText = encryptMessage(); shift_selector.value = "3"  });
 shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 operation_selector.addEventListener("change", function () { result_div.innerText = encryptMessage() });
@@ -38,7 +38,7 @@ function encryptMessage() {
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
 
-    switch (cipher_value.value) {
+    switch (cipher_selector.value) {
         case "alphaNumeric":
             string = alphaNumeric(string);
             result_div.style = "word-spacing: 5px";
