@@ -20,8 +20,8 @@ export function blockString(string, number = 3, nullChar = "x") {
     return blockedString;
 }
 
-export function clear_text() {
-    keyword_option.checked = false;    
+export function resetAllValues() {
+    keyword_option.checked = false;
     keyword_selector.classList.add("unselectable");
     text_input.value = ""; result_div.innerText = "";
     cipher_selector.value = "";
@@ -35,7 +35,7 @@ export function stretch_text() {
     setTimeout(() => { result_div.style.letterSpacing = "normal" }, 250)
 }
 
-export function update_values() {
+export function clear_settings() {
     shift_selector.classList.add("unselectable");
     operation_selector.classList.add("unselectable");
     result_div.style = "word-spacing: normal";

@@ -1,7 +1,7 @@
 //JS CryptoConverter
 //main.js
 
-import { blockString, stretch_text, clear_text, update_values } from "/utilities.js";
+import { blockString, stretch_text, resetAllValues, clear_settings } from "/utilities.js";
 import { encryptCaesar, decryptCaesar } from "/caesar.js";
 import { alphaNumeric } from "/alphaNumeric.js";
 import { atbash } from "/atbash.js";
@@ -22,18 +22,18 @@ export const operation_selector = document.getElementById("operation_selector");
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
 block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
-document.getElementById("clear_button").addEventListener("click", () => { clear_text(), update_values() });
+document.getElementById("clear_button").addEventListener("click", () => { resetAllValues(), clear_settings() });
 cipher_selector.addEventListener("change", () => { result_div.innerText = encryptMessage(); shift_selector.value = "3"  });
 shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
-operation_selector.addEventListener("change", function () { result_div.innerText = encryptMessage() });
-keyword_option.addEventListener("change", function () {
+operation_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
+keyword_option.addEventListener("change", () => {
     keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable");
     result_div.innerText = encryptMessage();
 })
 
 function encryptMessage() {
-    update_values();
+    clear_settings();
     var string = text_input.value;
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
