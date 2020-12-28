@@ -23,7 +23,7 @@ text_input.addEventListener("input", () => { result_div.innerText = encryptMessa
 block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
 document.getElementById("clear_button").addEventListener("click", () => { clear_text(), update_values() });
-cipher_value.addEventListener("change", () => { result_div.innerText = encryptMessage() });
+cipher_value.addEventListener("change", () => { result_div.innerText = encryptMessage(); shift_selector.value = "3"  });
 shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 operation_selector.addEventListener("change", function () { result_div.innerText = encryptMessage() });
