@@ -9,6 +9,7 @@
 - Morse Code
 - Alpha Numeric
 - Reverse
+- Rot13
 
 #### Additional Features:
 - Character/string blocking
