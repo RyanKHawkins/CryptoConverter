@@ -17,6 +17,7 @@ export const cipher_selector = document.getElementById("cipher_selector");
 export const shift_selector = document.getElementById("shift_selector");
 export const keyword_selector = document.getElementById("keyword_selector");
 export const operation_selector = document.getElementById("operation_selector");
+const copyButton = document.getElementById("copy_button")
 
 //Event Listeners
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
@@ -31,6 +32,7 @@ keyword_option.addEventListener("change", () => {
     keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable");
     result_div.innerText = encryptMessage();
 })
+copyButton.addEventListener("click", copyToClipboard)
 
 function encryptMessage() {
     clear_settings();
@@ -77,4 +79,19 @@ function encryptMessage() {
     }
     keyword_selector.value = "";
     return string;
+}
+
+function copyToClipboard() {
+    if (result_div.innerText == "") return
+
+    result_div.value = result_div.innerText
+    console.log(`innerText:  ${result_div.innerText}`)
+    console.log(`value:  ${result_div.value}`)
+
+    /*
+    var copyText = document.querySelector("#text_result")
+    copyText.select()
+    document.execCommand("copy")
+    */
+
 }
