@@ -3,14 +3,15 @@
 ###### *Cryptography converter using Javascript.*
 
 
-#### Available Ciphers:
+### Available Ciphers:
 - Atbash
-- Caesar/Substitution
+- Caesar (shift substitution)
+- Rot13 (Ceasar shift of 13)
 - Morse Code
 - Alpha Numeric
 - Reverse
-- Rot13
 
-#### Additional Features:
+
+### Additional Features:
 - Character/string blocking
-- Keyword shift option for appropriate ciphers
+- Keyword shift option for available ciphers
