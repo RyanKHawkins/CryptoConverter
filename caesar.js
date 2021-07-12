@@ -1,4 +1,4 @@
-//caesar.js
+// caesar.js
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const lowercase_alphabet = [];

@@ -1,4 +1,4 @@
-//JS AlphaNumeric Cipher (number sub)
+// alphaNumeric.js (number sub)
 
 const alphabet = " ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 

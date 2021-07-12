@@ -1,4 +1,4 @@
-//utilities.js
+// utilities.js
 
 import { result_div, text_input, cipher_selector, shift_selector, keyword_selector } from "/main.js";
 
