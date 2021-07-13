@@ -1,11 +1,11 @@
 //JS CryptoConverter
 // main.js
 
-import { blockString, stretch_text, resetAllValues, clear_settings } from "/utilities.js";
-import { encryptCaesar, decryptCaesar } from "/caesar.js";
-import { alphaNumeric } from "/alphaNumeric.js";
-import { atbash } from "/atbash.js";
-import { encryptMorse, decryptMorse } from "/morseCode.js";
+import { blockString, stretch_text, resetAllValues, clear_settings } from "./utilities.js";
+import { encryptCaesar, decryptCaesar } from "./caesar.js";
+import { alphaNumeric } from "./alphaNumeric.js";
+import { atbash } from "./atbash.js";
+import { encryptMorse, decryptMorse } from "./morseCode.js";
 
 //Initializing DOM variables
 export const text_input = document.getElementById("text_input");

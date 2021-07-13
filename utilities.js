@@ -1,6 +1,6 @@
 // utilities.js
 
-import { result_div, text_input, cipher_selector, shift_selector, keyword_selector } from "/main.js";
+import { result_div, text_input, cipher_selector, shift_selector, keyword_selector } from "./main.js";
 
 export function blockString(string, number = 3, nullChar = "x") {
     var string = string.replace(/ /g, "").split("");
