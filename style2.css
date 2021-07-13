@@ -84,3 +84,14 @@ footer {
     padding: 5px;
     text-align: center;
 }
+
+@media print {
+    body *:not(#text_result):not(#text_result *) {
+        visibility: hidden;
+    }
+    #text_result {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
