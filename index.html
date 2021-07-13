@@ -17,10 +17,6 @@
         <div class="options_menu">
             <hr>
             <div>
-                <select name="operation" id="operation_selector" class="modifiers unselectable">
-                    <option label="Encrypt" value="encrypt"></option>
-                    <option label="Decrypt" value="decrypt"></option>
-                </select>
                 <label for="cipher_selector">Cipher</label>
                 <select id="cipher_selector" class="modifiers">
                     <option disabled selected value>Choose cipher</option>
@@ -31,6 +27,10 @@
                     <option label="Rot13" value="rot13">
                     <option label="Reverse" value="reverse"></option>
                 </select>
+                <select name="operation" id="operation_selector" class="modifiers unselectable">
+                    <option label="Encrypt" value="encrypt"></option>
+                    <option label="Decrypt" value="decrypt"></option>
+                </select>                
             </div>
             <div>
                 <label for="block_option">
