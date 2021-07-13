@@ -59,6 +59,8 @@ function encryptMessage() {
             break;
         case "morse_code":
             operation_selector.classList.remove("unselectable");
+            keyword_selector.value = "";
+            keyword_option.checked = false;
             if (operation_selector.value == "encrypt") {
                 string = encryptMorse(string);
             }
@@ -77,6 +79,7 @@ function encryptMessage() {
             string = string;
             break;
     }
+    //TO DO:  Remove once setKeyword function is working?
     keyword_selector.value = "";
     return string;
 }
