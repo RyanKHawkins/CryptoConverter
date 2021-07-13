@@ -34,7 +34,7 @@ export function evaluateKeywordOption() {
     }
 }
 
-export function hasKeywwordOption() {
+export function hasKeywordOption() {
     const keywordCiphers = ["alphaNumeric", "atbash", "ceasar", "reverse", "rot13"]
     return keywordCiphers.includes(cipher_selector.value)
 }

@@ -8,16 +8,17 @@ import { atbash } from "./atbash.js";
 import { encryptMorse, decryptMorse } from "./morseCode.js";
 
 //Initializing DOM variables
-export const text_input = document.getElementById("text_input");
-export const result_div = document.getElementById("text_result");
-export const block_option = document.getElementById("block_option");
-export const caps_option = document.getElementById("caps_option");
-export const keyword_option = document.getElementById("keyword_option");
-export const cipher_selector = document.getElementById("cipher_selector");
-export const shift_selector = document.getElementById("shift_selector");
-export const keyword_selector = document.getElementById("keyword_selector");
-export const operation_selector = document.getElementById("operation_selector");
-const copyButton = document.getElementById("copy_button")
+const QS = (q) => document.querySelector(q)
+export const text_input = QS("#text_input")
+export const result_div = QS("#text_result");
+export const block_option = QS("#block_option");
+export const caps_option = QS("#caps_option");
+export const keyword_option = QS("#keyword_option");
+export const cipher_selector = QS("#cipher_selector");
+export const shift_selector = QS("#shift_selector");
+export const keyword_selector = QS("#keyword_selector");
+export const operation_selector = QS("#operation_selector");
+const copyButton = QS("#copy_button")
 
 //Event Listeners
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
