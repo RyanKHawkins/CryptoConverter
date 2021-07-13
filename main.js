@@ -86,16 +86,14 @@ function encryptMessage() {
 }
 
 function copyToClipboard() {
-    if (result_div.innerText == "") return
-
-    result_div.value = result_div.innerText
-    console.log(`innerText:  ${result_div.innerText}`)
-    console.log(`value:  ${result_div.value}`)
-
-    /*
-    var copyText = document.querySelector("#text_result")
+    console.log(`InnerText:  ${result_div.innerText}`)
+    console.log(`Cipher:  ${cipher_selector.value}`)
+    if (result_div.innerText == "" || !cipher_selector.value) {
+        console.log("did not copy")
+        return
+    }
+    var copyText = QS("#text_result")
     copyText.select()
     document.execCommand("copy")
-    */
-
+    console.log("copied")
 }

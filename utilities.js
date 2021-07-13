@@ -26,7 +26,7 @@ export function stretch_text() {
 }
 
 export function evaluateKeywordOption() {
-    const keywordCiphers = ["alphaNumeric", "atbash", "ceasar", "reverse", "rot13"]
+    const keywordCiphers = ["alphaNumeric", "atbash", "caesar", "reverse", "rot13"]
     if (keywordCiphers.includes(cipher_selector.value)) {
         console.log(`${cipher_selector.value} has a keyword option.`)
     } else {
@@ -35,7 +35,7 @@ export function evaluateKeywordOption() {
 }
 
 export function hasKeywordOption() {
-    const keywordCiphers = ["alphaNumeric", "atbash", "ceasar", "reverse", "rot13"]
+    const keywordCiphers = ["alphaNumeric", "atbash", "caesar", "reverse", "rot13"]
     return keywordCiphers.includes(cipher_selector.value)
 }
 
