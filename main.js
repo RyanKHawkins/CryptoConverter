@@ -24,7 +24,7 @@ text_input.addEventListener("input", () => { result_div.innerText = encryptMessa
 block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
 document.getElementById("clear_button").addEventListener("click", () => { resetAllValues(), clear_settings() });
-cipher_selector.addEventListener("change", () => { result_div.innerText = encryptMessage(); evaluateKeywordOption });
+cipher_selector.addEventListener("change", () => { result_div.innerText = encryptMessage(); evaluateKeywordOption() });
 shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 operation_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
