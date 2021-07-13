@@ -1,7 +1,7 @@
 //JS CryptoConverter
 // main.js
 
-import { blockString, stretch_text, resetAllValues, clear_settings } from "./utilities.js";
+import { blockString, stretch_text, resetAllValues, clear_settings, evaluateKeywordOption } from "./utilities.js";
 import { encryptCaesar, decryptCaesar } from "./caesar.js";
 import { alphaNumeric } from "./alphaNumeric.js";
 import { atbash } from "./atbash.js";
@@ -24,7 +24,7 @@ text_input.addEventListener("input", () => { result_div.innerText = encryptMessa
 block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
 document.getElementById("clear_button").addEventListener("click", () => { resetAllValues(), clear_settings() });
-cipher_selector.addEventListener("change", () => { result_div.innerText = encryptMessage(); shift_selector.value = "3"  });
+cipher_selector.addEventListener("change", () => { result_div.innerText = encryptMessage(); evaluateKeywordOption });
 shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 operation_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });

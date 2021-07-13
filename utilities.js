@@ -25,6 +25,15 @@ export function stretch_text() {
     setTimeout(() => { result_div.style.letterSpacing = "normal" }, 250)
 }
 
+export function evaluateKeywordOption() {
+    const keywordCiphers = ["alphaNumeric", "atbash", "ceasar", "reverse"]
+    if (keywordCiphers.includes(cipher_selector.value)) {
+        console.log(`${cipher_selector.value} has a keyword option.`)
+    } else {
+        console.log(`${cipher_selector.value} does not have a keyword option.`)
+    }
+}
+
 export function resetAllValues() {
     block_option.checked = false;
     caps_option.checked = false;
