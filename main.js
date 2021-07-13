@@ -1,7 +1,7 @@
 //JS CryptoConverter
 // main.js
 
-import { blockString, stretch_text, resetAllValues, clear_settings, evaluateKeywordOption } from "./utilities.js";
+import { blockString, stretch_text, resetAllValues, clear_settings, evaluateKeywordOption, hasKeywordOption } from "./utilities.js";
 import { encryptCaesar, decryptCaesar } from "./caesar.js";
 import { alphaNumeric } from "./alphaNumeric.js";
 import { atbash } from "./atbash.js";
