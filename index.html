@@ -21,7 +21,6 @@
                     <option label="Encrypt" value="encrypt"></option>
                     <option label="Decrypt" value="decrypt"></option>
                 </select>
-
                 <label for="cipher_selector">Cipher</label>
                 <select id="cipher_selector" class="modifiers">
                     <option disabled selected value>Choose cipher</option>
@@ -32,12 +31,8 @@
                     <option label="Rot13" value="rot13">
                     <option label="Reverse" value="reverse"></option>
                 </select>
-
-
-
             </div>
             <div>
-
                 <label for="block_option">
                     <input type="checkbox" class="modifiers" id="block_option">Block</input>
                 </label>
@@ -45,6 +40,8 @@
                 <label for="caps_option">
                     <input type="checkbox" class="modifiers" id="caps_option">Capiltalize</input>
                 </label>
+            </div>
+            <div id="modifier-line">
                 <label for="shift_selector"></label>
                     <input name="shift_selector" type="number" min="0" max="26" id="shift_selector" class="unselectable modifiers" value="3">Shift</input>
                 <label for="keyword_option">
@@ -53,15 +50,16 @@
 
                 <label for="keyword_selector"></label>
                     <input name="keyword_selector" type="text" id="keyword_selector" maxlength="15" class="unselectable modifiers" value="" autocomplete="off" placeholder="keyword"></input>
-
-                </select>
-                <button id="clear_button">Clear</button>
+             
             </div>
-
             <hr>
         </div>
         <div id="text_result" class="texts"></div>
-        <button id="copy_button" hidden>Copy Text</button>
+        <div>
+            <button id="copy_button" class="unselectable modifiers">Copy Text</button>
+            <button id="clear_button">Clear</button>              
+        </div>
+         
         <footer>&copy Ryan K. Hawkins 2020</footer>   
     </div>
  

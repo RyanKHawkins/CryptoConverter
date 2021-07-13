@@ -12,6 +12,10 @@ body {
     text-transform: uppercase;
 }
 #converter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: lightblue;
     border: 1px solid darkgray;
     width: 50%;

@@ -12,6 +12,7 @@
 - Reverse
 
 
+
 ### Additional Features:
 - Character/string blocking
 - Keyword shift option for available ciphers
