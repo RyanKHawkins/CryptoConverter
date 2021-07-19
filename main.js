@@ -86,13 +86,13 @@ function encryptMessage() {
 }
 
 function copyToClipboard() {
-    console.log(`InnerText:  ${result_div.innerText}`)
-    console.log(`Cipher:  ${cipher_selector.value}`)
+    //console.log(`InnerText:  ${result_div.innerText}`)
+    //console.log(`Cipher:  ${cipher_selector.value}`)
     if (result_div.innerText == "" || !cipher_selector.value) {
         console.log("did not copy")
         return
     }
-    var copyText = QS("#text_result")
+    var copyText = result_div
     copyText.select()
     document.execCommand("copy")
     console.log("copied")
