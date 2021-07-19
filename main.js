@@ -14,6 +14,7 @@ export const result_div = QS("#text_result");
 export const block_option = QS("#block_option");
 export const caps_option = QS("#caps_option");
 export const keyword_option = QS("#keyword_option");
+export const punctuation_option = QS("#punctuation_option")
 export const cipher_selector = QS("#cipher_selector");
 export const shift_selector = QS("#shift_selector");
 export const keyword_selector = QS("#keyword_selector");
@@ -24,6 +25,7 @@ const copyButton = QS("#copy_button")
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
 block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
+punctuation_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
 document.getElementById("clear_button").addEventListener("click", () => { resetAllValues(), clear_settings() });
 cipher_selector.addEventListener("change", () => { result_div.innerText = encryptMessage(); evaluateKeywordOption() });
 shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
@@ -38,6 +40,8 @@ copyButton.addEventListener("click", copyToClipboard)
 function encryptMessage() {
     clear_settings();
     let string = text_input.value;
+
+    punctuation_option.checked ? string = string.replace(/[^ a-zA-Z]/g, "") : string;
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
 
@@ -83,6 +87,10 @@ function encryptMessage() {
     //TO DO:  Remove once setKeyword function is working?
     keyword_selector.value = "";
     return string;
+}
+
+function removePunctuation() {
+
 }
 
 function copyToClipboard() {
