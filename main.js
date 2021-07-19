@@ -7,7 +7,7 @@ import { alphaNumeric } from "./alphaNumeric.js";
 import { atbash } from "./atbash.js";
 import { encryptMorse, decryptMorse } from "./morseCode.js";
 
-//Initializing DOM variables
+// Initializing DOM variables
 const QS = (q) => document.querySelector(q)
 export const text_input = QS("#text_input")
 export const result_div = QS("#text_result");
@@ -20,7 +20,7 @@ export const keyword_selector = QS("#keyword_selector");
 export const operation_selector = QS("#operation_selector");
 const copyButton = QS("#copy_button")
 
-//Event Listeners
+// Setting Event Listeners
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
 block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
@@ -37,7 +37,7 @@ copyButton.addEventListener("click", copyToClipboard)
 
 function encryptMessage() {
     clear_settings();
-    var string = text_input.value;
+    let string = text_input.value;
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
 
