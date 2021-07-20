@@ -45,6 +45,12 @@ function encryptMessage() {
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
 
+    if (!hasKeywordOption()) {
+        keyword_selector.value = "";
+        keyword_option.checked = false;
+        keyword_selector.classList.add("unselectable")
+    }
+
     switch (cipher_selector.value) {
         case "alphaNumeric":
             string = alphaNumeric(string);
@@ -64,8 +70,6 @@ function encryptMessage() {
             break;
         case "morse_code":
             operation_selector.classList.remove("unselectable");
-            keyword_selector.value = "";
-            keyword_option.checked = false;
             if (operation_selector.value == "encrypt") {
                 string = encryptMorse(string);
             }
