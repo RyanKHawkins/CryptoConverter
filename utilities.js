@@ -42,13 +42,14 @@ export function hasKeywordOption() {
 export function resetAllValues() {
     block_option.checked = false;
     caps_option.checked = false;
+    punctuation_option.checked = false
     text_input.value = ""; 
     result_div.innerText = "";
     cipher_selector.value = "";
+    operation_selector.value = "encrypt";
     keyword_option.checked = false;
     keyword_selector.classList.add("unselectable"); keyword_selector.value = "";
     shift_selector.value = 3;
-    operation_selector.value = "encrypt";
 }
 
 export function clear_settings() {
