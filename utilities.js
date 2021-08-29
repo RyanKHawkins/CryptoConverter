@@ -42,7 +42,7 @@ export function hasKeywordOption() {
 export function resetAllValues() {
     block_option.checked = false;
     caps_option.checked = false;
-    punctuation_option.checked = false
+    punctuation_remove_option.checked = false
     text_input.value = ""; 
     result_div.innerText = "";
     cipher_selector.value = "";

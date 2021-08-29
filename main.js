@@ -25,7 +25,7 @@ const copyButton = QS("#copy_button")
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
 block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
-punctuation_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
+punctuation_remove_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
 document.getElementById("clear_button").addEventListener("click", () => { resetAllValues(), clear_settings() });
 cipher_selector.addEventListener("change", () => { result_div.innerText = encryptMessage(); evaluateKeywordOption() });
 shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
@@ -41,7 +41,7 @@ function encryptMessage() {
     clear_settings();
     let string = text_input.value;
 
-    punctuation_option.checked ? string = string.replace(/[^ a-zA-Z]/g, "") : string;
+    punctuation_remove_option ? string = string.replace(/[^ a-zA-Z]/g, "") : string;
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
 
