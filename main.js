@@ -41,7 +41,7 @@ function encryptMessage() {
     clear_settings();
     let string = text_input.value;
 
-    punctuation_remove_option ? string = string.replace(/[^ a-zA-Z]/g, "") : string;
+    punctuation_remove_option.checked ? string = string.replace(/[^ a-zA-Z]/g, "") : string;
     block_option.checked ? string = blockString(string) : string;
     caps_option.checked ? string = string.toUpperCase() : string;
 
