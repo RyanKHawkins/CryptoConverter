@@ -20,13 +20,14 @@ export const shift_selector = QS("#shift_selector");
 export const keyword_selector = QS("#keyword_selector");
 export const operation_selector = QS("#operation_selector");
 const copyButton = QS("#copy_button")
+export const clear_button = QS("#clear_button")
 
 // Setting Event Listeners
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
 block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
 caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
 punctuation_remove_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
-document.getElementById("clear_button").addEventListener("click", () => { resetAllValues(), clear_settings() });
+clear_button.addEventListener("click", () => { resetAllValues(), clear_settings() });
 cipher_selector.addEventListener("change", () => { result_div.innerText = encryptMessage(); evaluateKeywordOption() });
 shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
 keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });

@@ -1,6 +1,6 @@
 // utilities.js
 
-import { result_div, text_input, cipher_selector, shift_selector, keyword_selector } from "./main.js";
+import { result_div, text_input, cipher_selector, shift_selector, keyword_selector, clear_button } from "./main.js";
 
 export function blockString(string, number = 3, nullChar = "x") {
     var string = string.replace(/ /g, "").split("");
@@ -50,6 +50,8 @@ export function resetAllValues() {
     keyword_option.checked = false;
     keyword_selector.classList.add("unselectable"); keyword_selector.value = "";
     shift_selector.value = 3;
+    clear_button.innerText = "Cleared";
+    setTimeout(() => clear_button.innerText = "Clear", 500)
 }
 
 export function clear_settings() {
