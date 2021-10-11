@@ -114,9 +114,5 @@ function copyToClipboard() {
 
     // Temporarily change copy button text to "Copied" for 2 seconds.
     copyButton.innerText = "Copied"
-    setTimeout(
-        () => copyButton.innerText = "Copy Text",
-        500
-    )
-
+    setTimeout(() => copyButton.innerText = "Copy Text", 500)
 }

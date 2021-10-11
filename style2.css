@@ -90,12 +90,19 @@ footer {
 }
 
 @media print {
-    body *:not(#text_result):not(#text_result *) {
+    /* body *:not(#text_result):not(#text_result *) {
+        visibility: hidden;
+    } */
+    body {
         visibility: hidden;
     }
+    #text_input {
+        visibility: visible;
+    }
     #text_result {
-        position: absolute;
-        top: 0;
-        left: 0;
+        visibility: visible;
+        //position: absolute;
+        //top: 0;
+        //left: 0;
     }
 }
