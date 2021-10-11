@@ -100,11 +100,13 @@ function removePunctuation() {
 function copyToClipboard() {
     //console.log(`InnerText:  ${result_div.innerText}`)
     //console.log(`Cipher:  ${cipher_selector.value}`)
+    var copyText = result_div.innerText
+    console.log(copyText !== "" ? `copyText:  ${copyText}` : "nothing copied")
     if (result_div.innerText == "" || !cipher_selector.value) {
         console.log("did not copy")
         return
     }
-    var copyText = result_div
+
     copyText.select()
     document.execCommand("copy")
     console.log("copied")
