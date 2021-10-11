@@ -80,6 +80,10 @@ hr {
 #text_result {
     word-wrap: break-word;
 }
+.bottom_buttons {
+    margin: 6px;
+    width:  90px
+}
 footer {
     padding: 5px;
     text-align: center;

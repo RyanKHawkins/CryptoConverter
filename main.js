@@ -93,21 +93,29 @@ function encryptMessage() {
     return string;
 }
 
-function removePunctuation() {
-
+function removePunctuation(string) {
+    return string = string.replace(/[^ a-zA-Z]/g, "")
 }
 
 function copyToClipboard() {
-    //console.log(`InnerText:  ${result_div.innerText}`)
-    //console.log(`Cipher:  ${cipher_selector.value}`)
-    var copyText = result_div.innerText
-    console.log(copyText !== "" ? `copyText:  ${copyText}` : "nothing copied")
-    if (result_div.innerText == "" || !cipher_selector.value) {
-        console.log("did not copy")
-        return
-    }
 
-    copyText.select()
-    document.execCommand("copy")
-    console.log("copied")
+    var copyText = result_div.innerText
+    //console.log(copyText !== "" ? `copyText:  ${copyText}` : "nothing copied")
+
+    // if (result_div.innerText == "" || !cipher_selector.value) {
+    //     console.log("did not copy")
+    //     return
+    // }
+
+    // copyText.select()
+    // document.execCommand("copy")
+    // console.log("copied")
+
+    // Temporarily change copy button text to "Copied" for 2 seconds.
+    copyButton.innerText = "Copied"
+    setTimeout(
+        () => copyButton.innerText = "Copy Text",
+        500
+    )
+
 }
