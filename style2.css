@@ -16,7 +16,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: lightblue;
+    background-color: #BDD3EF;
     border: 1px solid darkgray;
     width: 50%;
     //height: 450px;
