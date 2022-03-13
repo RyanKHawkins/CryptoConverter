@@ -46,7 +46,7 @@ body {
 
 }
 hr {
-    margin: 10px 25px 10px 25px;
+    margin: 10px 25px;
 }
 
 .options_menu {
@@ -74,6 +74,13 @@ hr {
 .unselectable:hover {
     color:gray;
 }
+
+#buttonRow, .modifier-line {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 #clear_button {
 
 }

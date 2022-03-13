@@ -32,7 +32,7 @@
                     <option label="Decrypt" value="decrypt"></option>
                 </select>                
             </div>
-            <div>
+            <div class = "modifier-line">
                 <label for="block_option">
                     <input type="checkbox" class="modifiers" id="block_option">Block</input>
                 </label>
@@ -45,7 +45,7 @@
                     <input type="checkbox" class="modifiers" id="punctuation_remove_option">Letters only
                 </label>
             </div>
-            <div id="modifier-line">
+            <div class="modifier-line">
                 <label for="shift_selector">Shift</label>
                     <input name="shift_selector" type="number" min="0" max="26" id="shift_selector" class="unselectable modifiers" value="3"></input>
                 <label for="keyword_option">
@@ -59,7 +59,7 @@
             <hr>
         </div>
         <div id="text_result" class="texts"></div>
-        <div>
+        <div id = "buttonRow">
             <button id="copy_button" class="bottom_buttons">Copy Text</button>
             <button onclick="window.print()" class="bottom_buttons">Print</button>
             <button id="clear_button" class="bottom_buttons">Clear</button>              
