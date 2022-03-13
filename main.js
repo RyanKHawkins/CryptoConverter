@@ -100,7 +100,13 @@ function removePunctuation(string) {
 
 function copyToClipboard() {
 
-    var copyText = result_div.innerText
+    var copyText = QS("#text_result")
+    //console.log(copyText.value)
+    copyText.select();
+    //copyText.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(copyText.value);
+    alert(`Copied: ${copyText.innerText}`)
     //console.log(copyText !== "" ? `copyText:  ${copyText}` : "nothing copied")
 
     // if (result_div.innerText == "" || !cipher_selector.value) {
