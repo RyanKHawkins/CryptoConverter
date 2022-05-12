@@ -29,7 +29,7 @@ export function decryptCaesar(string, shift = 3) {
             decryptedString += alphabet[(currentIndex - shift) % 26];
         } else if (lowercase_alphabet.includes(string[i])) {
             currentIndex = lowercase_alphabet.indexOf(string[i]);
-            decryptedString += lowercase_alphabet[(currentIndex - shift) % 26];
+            decryptedString += lowercase_alphabet[(26 + currentIndex - shift) % 26];
         } else {
             decryptedString += string[i];
         }
