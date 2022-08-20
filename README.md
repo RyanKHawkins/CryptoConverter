@@ -2,7 +2,7 @@
 
 ###### *Cryptography converter using Javascript.*
 
-![image](https://user-images.githubusercontent.com/50811019/185724760-14633c18-0690-4ec3-84b2-e9fe6ab80b44.png)
+![image](https://user-images.githubusercontent.com/50811019/185725110-0c9ce770-85dd-496a-b7ac-89ba4826806f.png)
 
 
 
