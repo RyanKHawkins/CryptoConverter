@@ -2,9 +2,8 @@
 
 ###### *Cryptography converter using Javascript.*
 
-![image](https://user-images.githubusercontent.com/50811019/185725110-0c9ce770-85dd-496a-b7ac-89ba4826806f.png)
 
-![image](https://github.com/JS-CryptoConverter/CryptoCaeser.gif)
+![CryptoCaesar](https://user-images.githubusercontent.com/50811019/185775316-704e00ee-6dae-428d-bfb9-d13a74de6ffc.gif)
 
 ### Available Ciphers:
 - Atbash
