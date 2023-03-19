@@ -22,6 +22,9 @@ export const operation_selector = QS("#operation_selector");
 const copyButton = QS("#copy_button")
 export const clear_button = QS("#clear_button")
 
+// Automatically populate current year as copyright year
+QS("#copyrightYear").innerText = new Date().getFullYear()
+
 // Setting Event Listeners
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
 block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
