@@ -1,7 +1,7 @@
 //JS CryptoConverter
 // main.js
 
-import { blockString, stretch_text, resetAllValues, clear_settings, evaluateKeywordOption, hasKeywordOption } from "./utilities.js";
+import { blockString, stretch_text, resetAllValues, clear_settings, evaluateKeywordOption, hasKeywordOption, removePunctuation } from "./utilities.js";
 import { encryptCaesar, decryptCaesar } from "./caesar.js";
 import { alphaNumeric } from "./alphaNumeric.js";
 import { atbash } from "./atbash.js";
@@ -95,10 +95,6 @@ function encryptMessage() {
     //TO DO:  Remove once setKeyword function is working?
     keyword_selector.value = "";
     return string;
-}
-
-function removePunctuation(string) {
-    return string = string.replace(/[^ a-zA-Z]/g, "")
 }
 
 function copyToClipboard() {
