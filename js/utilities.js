@@ -3,8 +3,8 @@
 import { result_div, text_input, cipher_selector, shift_selector, keyword_selector, clear_button } from "./main.js";
 
 export function blockString(string, number = 3, nullChar = "x") {
-    var string = string.replace(/ /g, "").split("");
-    var blockedString = "";
+    string = string.replace(/ /g, "").split("");
+    let blockedString = "";
     while (string.length > 0) {
         for (var i = 0; i < number; i++) {
             //string.length > 0 ? blockedString += string.shift() : blockedString += nullChar;
