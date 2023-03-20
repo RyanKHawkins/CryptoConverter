@@ -20,6 +20,11 @@ export function blockString(string, number = 3, nullChar = "x") {
     return blockedString;
 }
 
+
+export function removePunctuation(string) {
+    return string = string.replace(/[^ a-zA-Z]/g, "")
+}
+
 export function stretch_text() {
     result_div.style.letterSpacing = "2px";
     setTimeout(() => { result_div.style.letterSpacing = "normal" }, 250)
