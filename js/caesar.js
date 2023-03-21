@@ -7,10 +7,11 @@ for (let i = 0; i < alphabet.length; i++) {
 }
 
 export function encryptCaesar(string, shift = 3) {
-    var encryptedString = "";
-    for (var i = 0; i < string.length; i++) {
+    let encryptedString = "";
+    let currentIndex;
+    for (let i = 0; i < string.length; i++) {
         if (alphabet.includes(string[i])) {
-            var currentIndex = alphabet.indexOf(string[i]);
+            currentIndex = alphabet.indexOf(string[i]);
             encryptedString += alphabet[(currentIndex + shift) % 26];
         } else if (lowercase_alphabet.includes(string[i])) {
             currentIndex = lowercase_alphabet.indexOf(string[i]);
@@ -22,10 +23,11 @@ export function encryptCaesar(string, shift = 3) {
 }
 
 export function decryptCaesar(string, shift = 3) {
-    var decryptedString = "";
-    for (var i = 0; i < string.length; i++) {
+    let decryptedString = "";
+    let currentIndex;
+    for (let i = 0; i < string.length; i++) {
         if (alphabet.includes(string[i])) {
-            var currentIndex = alphabet.indexOf(string[i]);
+            currentIndex = alphabet.indexOf(string[i]);
             decryptedString += alphabet[(currentIndex - shift) % 26];
         } else if (lowercase_alphabet.includes(string[i])) {
             currentIndex = lowercase_alphabet.indexOf(string[i]);
