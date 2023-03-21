@@ -1,6 +1,6 @@
 // JS Morse Code
 
-var english_to_morse = {
+const english_to_morse = {
     "A": ".-", "B": "-...", "C": "-.-.", "D": "-..",
     "E": ".", "F": "..-.", "G": "--.", "H": "....",
     "I": "..", "J": ".---", "K": "-.-", "L": ".-..",
@@ -14,7 +14,7 @@ var english_to_morse = {
 }
 
 //Create morse_to_english
-var morse_to_english = {}
+let morse_to_english = {}
 for (let i = 0; i < Object.values(english_to_morse).length; i++) {
     let new_key = Object.values(english_to_morse)[i];
     let new_value = Object.keys(english_to_morse)[i];
@@ -23,7 +23,7 @@ for (let i = 0; i < Object.values(english_to_morse).length; i++) {
 
 export function encryptMorse(string) {
     string = string.toUpperCase();
-    var newString = "";
+    let newString = "";
     for (let i = 0; i < string.length; i++) {
         let char = string[i];
         if (char in english_to_morse) {
@@ -35,7 +35,7 @@ export function encryptMorse(string) {
 
 export function decryptMorse(string) {
     string = string.split(" ");
-    var newString = "";
+    let newString = "";
     for (let i = 0; i < string.length; i++) {
         let char = string[i];
         if (char in morse_to_english) {

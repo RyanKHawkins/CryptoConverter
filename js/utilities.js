@@ -6,7 +6,7 @@ export function blockString(string, number = 3, nullChar = "x") {
     string = string.replace(/ /g, "").split("");
     let blockedString = "";
     while (string.length > 0) {
-        for (var i = 0; i < number; i++) {
+        for (let i = 0; i < number; i++) {
             //string.length > 0 ? blockedString += string.shift() : blockedString += nullChar;
             if (string.length > 0) {
                 blockedString += string.shift();
