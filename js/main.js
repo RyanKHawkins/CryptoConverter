@@ -5,6 +5,7 @@ import { blockString, stretch_text, resetAllValues, clear_settings, evaluateKeyw
 import { encryptCaesar, decryptCaesar } from "./caesar.js";
 import { alphaNumeric } from "./alphaNumeric.js";
 import { atbash } from "./atbash.js";
+import { encryptBinary, decryptBinary } from "./binary.js";
 import { encryptMorse, decryptMorse } from "./morseCode.js";
 
 // Initializing DOM variables
@@ -62,6 +63,10 @@ function encryptMessage() {
             break;
         case "atbash":
             string = atbash(string);
+            break;
+        case "binary":
+            operation_selector.classList.remove("unselectable")
+            string = operation_selector.value == "encrypt" ? encryptBinary(string) : decryptBinary(string);
             break;
         case "caesar":
             shift_selector.classList.remove("unselectable");
