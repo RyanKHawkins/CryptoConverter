@@ -11,6 +11,7 @@
 - Rot13 (Ceasar shift of 13)
 - Morse Code
 - Alpha Numeric
+- Binary
 - Reverse
 
 
