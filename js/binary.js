@@ -2,7 +2,7 @@
 // binary.js
 
 export function encryptBinary(string) {
-    string = string.split("");
+    string = string.trim().split("");
     string = string.map(e => e = e.charCodeAt(0).toString(2));
     return string.join(" ");
 }
