@@ -7,10 +7,10 @@
 
 ### Available Ciphers:
 - Atbash
-- Caesar (shift substitution)
+- Alpha Numeric
+- Caesar (default shift of 3)
 - Rot13 (Ceasar shift of 13)
 - Morse Code
-- Alpha Numeric
 - Binary
 - Reverse
 
