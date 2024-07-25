@@ -1,6 +1,6 @@
 // utilities.js
 
-import { result_div, text_input, cipher_selector, shift_selector, keyword_selector, clear_button } from "./main.js";
+import { result_div, text_input, cipher_selector, shift_selector, keyword_selector, clear_button, operation_selector, punctuation_remove_option } from "./main.js";
 
 export function blockString(string, number = 3, nullChar = "x") {
     string = string.replace(/ /g, "").split("");
@@ -62,6 +62,7 @@ export function resetAllValues() {
 export function clear_settings() {
     shift_selector.classList.add("unselectable");
     operation_selector.classList.add("unselectable");
+    punctuation_remove_option.disabled = false;
     result_div.style = "word-spacing: normal";
 }
 
