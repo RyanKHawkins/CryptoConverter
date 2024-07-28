@@ -25,7 +25,7 @@ export function removePunctuation(string) {
     return string = string.replace(/[^ a-zA-Z]/g, "")
 }
 
-export function stretch_text() {
+export function stretchText() {
     result_div.style.letterSpacing = "2px";
     setTimeout(() => { result_div.style.letterSpacing = "normal" }, 250)
 }
@@ -59,7 +59,7 @@ export function resetAllValues() {
     setTimeout(() => clear_button.innerText = "Clear", 500)
 }
 
-export function clear_settings() {
+export function clearSettings() {
     shift_selector.classList.add("unselectable");
     operation_selector.classList.add("unselectable");
     punctuation_remove_option.disabled = false;

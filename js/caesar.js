@@ -1,9 +1,9 @@
 // caesar.js
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-const lowercase_alphabet = [];
+const lowerCaseAlphabet = [];
 for (let i = 0; i < alphabet.length; i++) {
-    lowercase_alphabet.push(alphabet[i].toLowerCase());
+    lowerCaseAlphabet.push(alphabet[i].toLowerCase());
 }
 
 export function encryptCaesar(string, shift = 3) {
@@ -13,9 +13,9 @@ export function encryptCaesar(string, shift = 3) {
         if (alphabet.includes(string[i])) {
             currentIndex = alphabet.indexOf(string[i]);
             encryptedString += alphabet[(currentIndex + shift) % 26];
-        } else if (lowercase_alphabet.includes(string[i])) {
-            currentIndex = lowercase_alphabet.indexOf(string[i]);
-            encryptedString += lowercase_alphabet[(currentIndex + shift) % 26];
+        } else if (lowerCaseAlphabet.includes(string[i])) {
+            currentIndex = lowerCaseAlphabet.indexOf(string[i]);
+            encryptedString += lowerCaseAlphabet[(currentIndex + shift) % 26];
         } else {
             encryptedString += string[i];
         }
@@ -29,9 +29,9 @@ export function decryptCaesar(string, shift = 3) {
         if (alphabet.includes(string[i])) {
             currentIndex = alphabet.indexOf(string[i]);
             decryptedString += alphabet[(26 + currentIndex - shift) % 26];
-        } else if (lowercase_alphabet.includes(string[i])) {
-            currentIndex = lowercase_alphabet.indexOf(string[i]);
-            decryptedString += lowercase_alphabet[(26 + currentIndex - shift) % 26];
+        } else if (lowerCaseAlphabet.includes(string[i])) {
+            currentIndex = lowerCaseAlphabet.indexOf(string[i]);
+            decryptedString += lowerCaseAlphabet[(26 + currentIndex - shift) % 26];
         } else {
             decryptedString += string[i];
         }
