@@ -1,7 +1,7 @@
 //JS CryptoConverter
 // main.js
 
-import { blockString, stretch_text, resetAllValues, clear_settings, evaluateKeywordOption, hasKeywordOption, removePunctuation } from "./utilities.js";
+import { blockString, stretchText, resetAllValues, clearSettings, evaluateKeywordOption, hasKeywordOption, removePunctuation } from "./utilities.js";
 import { encryptCaesar, decryptCaesar } from "./caesar.js";
 import { alphaNumeric } from "./alphaNumeric.js";
 import { atbash } from "./atbash.js";
@@ -20,7 +20,7 @@ export const cipher_selector = QS("#cipher_selector");
 export const shift_selector = QS("#shift_selector");
 export const keyword_selector = QS("#keyword_selector");
 export const operation_selector = QS("#operation_selector");
-const copyButton = QS("#copy_button")
+const copy_button = QS("#copy_button")
 export const clear_button = QS("#clear_button")
 
 // Automatically populate current year as copyright year
@@ -28,22 +28,27 @@ QS("#copyrightYear").innerText = new Date().getFullYear()
 
 // Setting Event Listeners
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
-block_option.addEventListener("click", () => { result_div.innerText = encryptMessage(), stretch_text() });
-caps_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
-punctuation_remove_option.addEventListener("click", () => { result_div.innerText = encryptMessage() });
-clear_button.addEventListener("click", () => { resetAllValues(), clear_settings() });
-cipher_selector.addEventListener("change", () => { result_div.innerText = encryptMessage(); evaluateKeywordOption() });
-shift_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
-keyword_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
-operation_selector.addEventListener("change", () => { result_div.innerText = encryptMessage() });
+[block_option, caps_option, punctuation_remove_option, keyword_option].forEach(option => {
+    option.addEventListener("click", () => {
+        result_div.innerText = encryptMessage();
+    });
+});
+[cipher_selector, shift_selector, keyword_selector, operation_selector].forEach(selector => {
+    selector.addEventListener("change", () => {
+        result_div.innerText = encryptMessage();
+    });
+});
+
+
+clear_button.addEventListener("click", () => { resetAllValues(), clearSettings() });
+cipher_selector.addEventListener("change", evaluateKeywordOption);
 keyword_option.addEventListener("change", () => {
     keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable");
-    result_div.innerText = encryptMessage();
-})
-copyButton.addEventListener("click", copyToClipboard)
+});
+copy_button.addEventListener("click", copyToClipboard)
 
 function encryptMessage() {
-    clear_settings();
+    clearSettings();
     let string = text_input.value;
 
     if (operation_selector.value == "decrypt") {
@@ -127,6 +132,6 @@ function copyToClipboard() {
     // console.log("copied")
 
     // Temporarily change copy button text to "Copied" for 2 seconds.
-    copyButton.innerText = "Copied"
-    setTimeout(() => copyButton.innerText = "Copy Text", 500)
+    copy_button.innerText = "Copied"
+    setTimeout(() => copy_button.innerText = "Copy Text", 500)
 }
