@@ -2,6 +2,7 @@
 // main.js
 
 import { blockString, stretchText, resetAllValues, clearSettings, evaluateKeywordOption, hasKeywordOption, removePunctuation } from "./utilities.js";
+import { blockString, stretchText, resetAllValues, clearSettings, evaluateKeywordOption, hasKeywordOption, removePunctuation } from "./utilities.js";
 import { encryptCaesar, decryptCaesar } from "./caesar.js";
 import { alphaNumeric } from "./alphaNumeric.js";
 import { atbash } from "./atbash.js";
@@ -20,6 +21,7 @@ export const cipher_selector = QS("#cipher_selector");
 export const shift_selector = QS("#shift_selector");
 export const keyword_selector = QS("#keyword_selector");
 export const operation_selector = QS("#operation_selector");
+const copy_button = QS("#copy_button")
 const copy_button = QS("#copy_button")
 export const clear_button = QS("#clear_button")
 
@@ -48,6 +50,7 @@ keyword_option.addEventListener("change", () => {
 copy_button.addEventListener("click", copyToClipboard)
 
 function encryptMessage() {
+    clearSettings();
     clearSettings();
     let string = text_input.value;
 
@@ -86,7 +89,7 @@ function encryptMessage() {
                 string = decryptCaesar(string, parseInt(shift_selector.value));
             }
             break;
-        case "morse_code":
+        case "morseCode":
             operation_selector.classList.remove("unselectable");
             if (operation_selector.value == "encrypt") {
                 string = encryptMorse(string);
@@ -132,6 +135,8 @@ function copyToClipboard() {
     // console.log("copied")
 
     // Temporarily change copy button text to "Copied" for 2 seconds.
+    copy_button.innerText = "Copied"
+    setTimeout(() => copy_button.innerText = "Copy Text", 500)
     copy_button.innerText = "Copied"
     setTimeout(() => copy_button.innerText = "Copy Text", 500)
 }

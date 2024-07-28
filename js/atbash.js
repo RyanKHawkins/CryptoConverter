@@ -1,9 +1,9 @@
 //JS Atbash Cipher
 
 const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-const lowercase_alphabet = [];
+const lowerCaseAlphabet = [];
 for (let i = 0; i < alphabet.length; i++) {
-    lowercase_alphabet.push(alphabet[i].toLowerCase());
+    lowerCaseAlphabet.push(alphabet[i].toLowerCase());
 }
 
 export function atbash(string) {
@@ -13,9 +13,9 @@ export function atbash(string) {
         if (alphabet.includes(string[i])) {
             const index = alphabet.indexOf(string[i]);
             encryptedString += alphabet.reverse()[index];
-        } else if (lowercase_alphabet.includes(string[i])) {
-            const index = lowercase_alphabet.indexOf(string[i]);
-            encryptedString += lowercase_alphabet.reverse()[index];
+        } else if (lowerCaseAlphabet.includes(string[i])) {
+            const index = lowerCaseAlphabet.indexOf(string[i]);
+            encryptedString += lowerCaseAlphabet.reverse()[index];
         } else {
             encryptedString += string[i];
         }
