@@ -2,7 +2,6 @@
 // main.js
 
 import { blockString, stretchText, resetAllValues, clearSettings, evaluateKeywordOption, hasKeywordOption, removePunctuation } from "./utilities.js";
-import { blockString, stretchText, resetAllValues, clearSettings, evaluateKeywordOption, hasKeywordOption, removePunctuation } from "./utilities.js";
 import { encryptCaesar, decryptCaesar } from "./caesar.js";
 import { alphaNumeric } from "./alphaNumeric.js";
 import { atbash } from "./atbash.js";
@@ -22,7 +21,6 @@ export const shift_selector = QS("#shift_selector");
 export const keyword_selector = QS("#keyword_selector");
 export const operation_selector = QS("#operation_selector");
 const copy_button = QS("#copy_button")
-const copy_button = QS("#copy_button")
 export const clear_button = QS("#clear_button")
 
 // Automatically populate current year as copyright year
@@ -35,22 +33,23 @@ text_input.addEventListener("input", () => { result_div.innerText = encryptMessa
         result_div.innerText = encryptMessage();
     });
 });
-[cipher_selector, shift_selector, keyword_selector, operation_selector].forEach(selector => {
+[cipher_selector, shift_selector, keyword_selector, operation_selector, keyword_option].forEach(selector => {
     selector.addEventListener("change", () => {
         result_div.innerText = encryptMessage();
     });
 });
 
-
+block_option.addEventListener("click", stretchText);
 clear_button.addEventListener("click", () => { resetAllValues(), clearSettings() });
 cipher_selector.addEventListener("change", evaluateKeywordOption);
 keyword_option.addEventListener("change", () => {
-    keyword_option.checked ? keyword_selector.classList.remove("unselectable") : keyword_selector.classList.add("unselectable");
+    keyword_option.checked 
+        ? keyword_selector.classList.remove("unselectable")
+        : keyword_selector.classList.add("unselectable");
 });
-copy_button.addEventListener("click", copyToClipboard)
+copy_button.addEventListener("click", copyToClipboard);
 
 function encryptMessage() {
-    clearSettings();
     clearSettings();
     let string = text_input.value;
 
@@ -135,8 +134,6 @@ function copyToClipboard() {
     // console.log("copied")
 
     // Temporarily change copy button text to "Copied" for 2 seconds.
-    copy_button.innerText = "Copied"
-    setTimeout(() => copy_button.innerText = "Copy Text", 500)
     copy_button.innerText = "Copied"
     setTimeout(() => copy_button.innerText = "Copy Text", 500)
 }
