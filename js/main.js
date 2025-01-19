@@ -115,7 +115,8 @@ function encryptMessage() {
 
 function copyToClipboard() {
 
-    var copyText = QS("#text_result")
+    let copyText = QS("#text_result").innerText
+    console.log(copyText)
     //console.log(copyText.value)
     copyText.select();
     //copyText.setSelectionRange(0, 99999);
