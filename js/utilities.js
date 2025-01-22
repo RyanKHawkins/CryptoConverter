@@ -66,3 +66,8 @@ export function clearSettings() {
     result_div.style = "word-spacing: normal";
 }
 
+export function copyToClipboard() {
+    const copyText = result_div.innerText
+    navigator.clipboard.writeText(copyText);
+    setTimeout(() => copy_button.innerText = "Copy Text", 500)
+}

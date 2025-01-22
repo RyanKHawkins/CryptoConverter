@@ -1,7 +1,7 @@
 //JS CryptoConverter
 // main.js
 
-import { blockString, stretchText, resetAllValues, clearSettings, evaluateKeywordOption, hasKeywordOption, removePunctuation } from "./utilities.js";
+import { blockString, stretchText, resetAllValues, clearSettings, evaluateKeywordOption, hasKeywordOption, copyToClipboard,removePunctuation } from "./utilities.js";
 import { encryptCaesar, decryptCaesar } from "./caesar.js";
 import { alphaNumeric } from "./alphaNumeric.js";
 import { atbash } from "./atbash.js";
@@ -111,29 +111,4 @@ function encryptMessage() {
     //TO DO:  Remove once setKeyword function is working?
     keyword_selector.value = "";
     return string;
-}
-
-function copyToClipboard() {
-
-    let copyText = QS("#text_result")
-    //console.log(copyText.value)
-    copyText.select();
-    //copyText.setSelectionRange(0, 99999);
-
-    navigator.clipboard.writeText(copyText.value);
-    alert(`Copied: ${copyText.innerText}`)
-    //console.log(copyText !== "" ? `copyText:  ${copyText}` : "nothing copied")
-
-    // if (result_div.innerText == "" || !cipher_selector.value) {
-    //     console.log("did not copy")
-    //     return
-    // }
-
-    // copyText.select()
-    // document.execCommand("copy")
-    // console.log("copied")
-
-    // Temporarily change copy button text to "Copied" for 2 seconds.
-    copy_button.innerText = "Copied"
-    setTimeout(() => copy_button.innerText = "Copy Text", 500)
 }
