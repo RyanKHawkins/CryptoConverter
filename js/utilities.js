@@ -1,6 +1,6 @@
 // utilities.js
 
-import { result_div, text_input, cipher_selector, shift_selector, keyword_selector, clear_button, operation_selector, punctuation_remove_option } from "./main.js";
+import { result_div, text_input, cipher_selector, shift_selector, keyword_selector, clear_button, operation_selector, punctuation_remove_option, title, ORIGINAL_TITLE } from "./main.js";
 
 export function blockString(string, number = 3, nullChar = "x") {
     string = string.replace(/ /g, "").split("");
@@ -70,4 +70,27 @@ export function copyToClipboard() {
     const copyText = result_div.innerText
     navigator.clipboard.writeText(copyText);
     setTimeout(() => copy_button.innerText = "Copy Text", 500)
+}
+
+export function scrambleEffect() {
+    let interval = setInterval(() => {
+        scrambleTitle()
+    }, 50)
+    setTimeout(() => {
+        clearInterval(interval)
+        title.innerText = ORIGINAL_TITLE;
+    }, 2000)
+
+}
+
+function scrambleTitle() {
+    title.innerText = title.innerText
+        .split(" ")
+        .map((el) => {
+            return el
+                .split("")
+                .sort((a, b) => 0.5 - Math.random())
+                .join("");
+        })
+        .join(" ");
 }

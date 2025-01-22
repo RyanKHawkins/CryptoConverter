@@ -1,7 +1,7 @@
 //JS CryptoConverter
 // main.js
 
-import { blockString, stretchText, resetAllValues, clearSettings, evaluateKeywordOption, hasKeywordOption, copyToClipboard,removePunctuation } from "./utilities.js";
+import { blockString, stretchText, resetAllValues, clearSettings, evaluateKeywordOption, hasKeywordOption, copyToClipboard, removePunctuation, scrambleEffect } from "./utilities.js";
 import { encryptCaesar, decryptCaesar } from "./caesar.js";
 import { alphaNumeric } from "./alphaNumeric.js";
 import { atbash } from "./atbash.js";
@@ -22,8 +22,10 @@ export const keyword_selector = QS("#keyword_selector");
 export const operation_selector = QS("#operation_selector");
 const copy_button = QS("#copy_button")
 export const clear_button = QS("#clear_button")
+export let title = document.querySelector("#title")
+export const ORIGINAL_TITLE = document.querySelector("#title").innerText;
 
-// Automatically populate current year as copyright year
+scrambleEffect()
 QS("#copyrightYear").innerText = new Date().getFullYear()
 
 // Setting Event Listeners
@@ -38,6 +40,7 @@ text_input.addEventListener("input", () => { result_div.innerText = encryptMessa
         result_div.innerText = encryptMessage();
     });
 });
+title.addEventListener("click", scrambleEffect);
 
 block_option.addEventListener("click", stretchText);
 clear_button.addEventListener("click", () => { resetAllValues(), clearSettings() });
