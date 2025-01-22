@@ -6,12 +6,12 @@
 ![CryptoCaesar](https://user-images.githubusercontent.com/50811019/185775316-704e00ee-6dae-428d-bfb9-d13a74de6ffc.gif)
 
 ### Available Ciphers
-- Atbash - [Wikipedia](https://en.wikipedia.org/wiki/Atbash)
+- [Atbash](https://en.wikipedia.org/wiki/Atbash)
 - Alpha Numeric
 - Binary
-- Caesar - [Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)
-- Morse Code - [Wikipedia](https://en.wikipedia.org/wiki/Morse_code)
-- Rot13 - [Wikipedia](https://en.wikipedia.org/wiki/ROT13)
+- [Caesar](https://en.wikipedia.org/wiki/Caesar_cipher)
+- [Morse Code](https://en.wikipedia.org/wiki/Morse_code)
+- [Rot13](https://en.wikipedia.org/wiki/ROT13)
 - Reverse
 
 ### Additional Features
