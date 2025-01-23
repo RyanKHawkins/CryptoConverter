@@ -34,7 +34,7 @@ export function encryptMorse(string) {
 }
 
 export function decryptMorse(string) {
-    string = string.split(" ");
+    string = string.replace(/_/g, "-").split(" ");
     let newString = "";
     for (let i = 0; i < string.length; i++) {
         let char = string[i];
