@@ -52,8 +52,8 @@ hr {
 .options_menu {
     text-align: center;
     display: inline;
-    //border: 1px solid darkgray;
-    //margin: 5px;
+    /* //border: 1px solid darkgray;
+    //margin: 5px; */
 }
 .modifiers {
     margin: 5px;
@@ -75,11 +75,11 @@ hr {
     color:gray;
 }
 
-#buttonRow, .modifier-line {
+/* #buttonRow, .modifier-line {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
+} */
 
 #clear_button {
 
