@@ -19,7 +19,7 @@ body {
     background-color: #BDD3EF;
     border: 1px solid darkgray;
     width: 50%;
-    //height: 450px;
+    /* height: 450px; */
     margin: auto;
     padding: 5px;
     min-width: 325px;
@@ -50,18 +50,27 @@ hr {
 }
 
 .options_menu {
-    text-align: center;
-    display: inline;
-    /* //border: 1px solid darkgray;
-    //margin: 5px; */
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    /* display: inline; */
 }
-.modifiers {
+
+/* .modifiers {
     margin: 5px;
+} */
+
+fieldset {
+    margin: 5px;
+    display: flex;
+    /* justify-content: center; */
+    gap: 5px;
+    align-items: center;
 }
 
 #shift_selector {
     width: 35px;
-    //margin-right: 2.5px;
+    /* margin-right: 2.5px; */
 }
 .operations_selector {
 
@@ -108,8 +117,8 @@ footer {
     }
     #text_result {
         visibility: visible;
-        //position: absolute;
-        //top: 0;
-        //left: 0;
+        /* position: absolute; */
+        /* top: 0; */
+        /* left: 0; */
     }
 }
