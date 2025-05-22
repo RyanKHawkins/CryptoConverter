@@ -45,9 +45,6 @@ body {
 #text_input {
 
 }
-hr {
-    margin: 10px 25px;
-}
 
 .options_menu {
     display: flex;
@@ -83,12 +80,6 @@ fieldset {
 .unselectable:hover {
     color:gray;
 }
-
-/* #buttonRow, .modifier-line {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-} */
 
 #clear_button {
 
