@@ -15,18 +15,18 @@ export const result_div = QS("#text_result");
 export const block_option = QS("#block_option");
 export const caps_option = QS("#caps_option");
 export const keyword_option = QS("#keyword_option");
-export const punctuation_remove_option = QS("#punctuation_remove_option")
+export const punctuation_remove_option = QS("#punctuation_remove_option");
 export const cipher_selector = QS("#cipher_selector");
 export const shift_selector = QS("#shift_selector");
 export const keyword_selector = QS("#keyword_selector");
 export const operation_selector = QS("#operation_selector");
-const copy_button = QS("#copy_button")
-export const clear_button = QS("#clear_button")
-export let title = document.querySelector("#title")
-export const ORIGINAL_TITLE = document.querySelector("#title").innerText;
+const copy_button = QS("#copy_button");
+export const clear_button = QS("#clear_button");
+export let title = QS("#title");
+export const ORIGINAL_TITLE = QS("#title").innerText;
 
 scrambleEffect()
-QS("#copyrightYear").innerText = new Date().getFullYear()
+QS("#copyrightYear").innerText = new Date().getFullYear();
 
 // Setting Event Listeners
 text_input.addEventListener("input", () => { result_div.innerText = encryptMessage() });
