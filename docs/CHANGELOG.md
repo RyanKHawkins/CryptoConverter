@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Added "," to Morse code encrypting/decrypting
+### Changed
+- Removed the ability for the copy function to work if there's no text.
 ### Fixed
 - Made "-" and "_" translate to the same when decrypting Morse code
 
