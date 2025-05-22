@@ -67,9 +67,14 @@ export function clearSettings() {
 }
 
 export function copyToClipboard() {
-    const copyText = result_div.innerText
+    const copyText = result_div.innerText;
+    if (!copyText) {
+        console.log("no text to copy");
+        return
+    }
     navigator.clipboard.writeText(copyText);
-    setTimeout(() => copy_button.innerText = "Copy Text", 500)
+    setTimeout(() => copy_button.innerText = "Copy Text", 500);
+    console.log("copyText: ", copyText);
 }
 
 export function scrambleEffect() {
