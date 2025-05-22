@@ -15,8 +15,7 @@
 			<textarea id="text_input" class="texts" autocomplete="off" placeholder="Enter message here."></textarea>
         </div>
         <div class="options_menu">
-            <hr>
-            <div>
+            <fieldset>
                 <label for="cipher_selector">Cipher</label>
                 <select id="cipher_selector" class="modifiers">
                     <option disabled selected value>Choose cipher</option>
@@ -37,8 +36,8 @@
                     <option label="Encrypt" value="encrypt"></option>
                     <option label="Decrypt" value="decrypt"></option>
                 </select>                
-            </div>
-            <div class = "modifier-line">
+            </fieldset>
+            <fieldset class = "modifier-line">
                 <label for="block_option">
                     <input type="checkbox" class="modifiers" id="block_option">Block</input>
                 </label>
@@ -50,8 +49,8 @@
                 <label for="punctuation_remove_option">
                     <input type="checkbox" class="modifiers" id="punctuation_remove_option" checked="true">No punctuation
                 </label>
-            </div>
-            <div class="modifier-line">
+            </fieldset>
+            <fieldset class="modifier-line">
                 <label for="shift_selector">Shift</label>
                     <input name="shift_selector" type="number" min="0" max="26" id="shift_selector" class="unselectable modifiers" value="3"></input>
                 <label for="keyword_option">
@@ -61,15 +60,17 @@
                 <label for="keyword_selector"></label>
                     <input name="keyword_selector" type="text" id="keyword_selector" maxlength="15" class="unselectable modifiers" value="" autocomplete="off" placeholder="keyword"></input>
              
-            </div>
-            <hr>
+            </fieldset>
         </div>
         <div id="text_result" class="texts"></div>
-        <div id = "buttonRow">
+        <!-- <div id = "buttonRow">
+        </div> -->
+        
+        <fieldset id="buttonRow">
             <button id="copy_button" class="bottom_buttons">Copy Text</button>
             <button onclick="window.print()" class="bottom_buttons">Print</button>
             <button id="clear_button" class="bottom_buttons">Clear</button>              
-        </div>
+        </fieldset>
          
         <footer>&copy Ryan K. Hawkins <span id="copyrightYear"></span><span> - version 1.1.0</span></footer>
     </div>
