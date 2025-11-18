@@ -45,18 +45,25 @@ export function hasKeywordOption() {
 }
 
 export function resetAllValues() {
-    block_option.checked = false;
-    caps_option.checked = false;
-    punctuation_remove_option.checked = false
-    text_input.value = ""; 
-    result_div.innerText = "";
-    cipher_selector.value = "";
-    operation_selector.value = "encrypt";
-    keyword_option.checked = false;
-    keyword_selector.classList.add("unselectable"); keyword_selector.value = "";
-    shift_selector.value = 3;
+    uncheckAllCheckboxes();
+    resetSelectors();
+    text_input.value = ""; // also clears result_div.innerText
+    keyword_selector.classList.add("unselectable");
     clear_button.innerText = "Cleared";
     setTimeout(() => clear_button.innerText = "Clear", 500)
+}
+
+function uncheckAllCheckboxes() {
+    const checkBoxes = Array.from(document.querySelectorAll('input[type = "checkbox"]'));
+    checkBoxes.forEach(checkbox => checkbox.checked = false)
+}
+
+function resetSelectors() {
+    [cipher_selector, keyword_selector].forEach(selector => {
+        selector.value = ""
+    });
+    operation_selector.value = "encrypt";
+    shift_selector.value = 3;
 }
 
 export function clearSettings() {
