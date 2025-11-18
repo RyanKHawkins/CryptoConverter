@@ -1,6 +1,6 @@
 // utilities.js
 
-import { result_div, text_input, cipher_selector, shift_selector, keyword_selector, clear_button, operation_selector, punctuation_remove_option, title, ORIGINAL_TITLE } from "./main.js";
+import { result_div, text_input, cipher_selector, shift_selector, keyword_selector, clear_button, operation_selector, punctuation_remove_option, title, ORIGINAL_TITLE, keyword_option } from "./main.js";
 
 export function blockString(string, number = 3, nullChar = "x") {
     string = string.replace(/ /g, "").split("");
